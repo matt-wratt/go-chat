@@ -1,0 +1,5 @@
+{
+	"ImportPath": "github.com/matt-wratt/messenger",
+	"GoVersion": "go1.5.1",
+	"Deps": []
+}

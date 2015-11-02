@@ -1,0 +1,18 @@
+* {
+  font-family: verdana;
+}
+
+.error {
+  color: red;
+}
+
+body > div {
+  margin: auto;
+  box-shadow: 0 0 5rem #333;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+}
