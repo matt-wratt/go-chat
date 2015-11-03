@@ -10,19 +10,25 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-	"regexp"
 
 	"github.com/matt-wratt/go-chat/api"
 )
 
-var messageAPI = api.NewAPI()
+var (
+	binding    string
+	port       int
+	messageAPI = api.NewAPI()
+)
+
+func init() {
+	flag.StringVar(&binding, "b", "0.0.0.0", "bind")
+	flag.IntVar(&port, "p", 8080, "server port")
+}
 
 func main() {
-	binding := flag.String("b", "0.0.0.0", "bind")
-	port := flag.Int("p", 8080, "server port")
 	flag.Parse()
 
-	os.Setenv("PORT", fmt.Sprintf("%d", *port+1))
+	os.Setenv("PORT", fmt.Sprintf("%d", port+1))
 
 	if err := command("Building client", "client", "npm", "run", "build").Run(); err != nil {
 		log.Fatal("Failed to build client")
@@ -33,23 +39,18 @@ func main() {
 	}
 
 	var proxy *httputil.ReverseProxy
-	if clientURL, err := url.Parse(fmt.Sprintf("http://localhost:%d", *port+1)); err == nil {
+	if clientURL, err := url.Parse(fmt.Sprintf("http://localhost:%d", port+1)); err == nil {
 		proxy = httputil.NewSingleHostReverseProxy(clientURL)
 	} else {
 		log.Fatalf("Failed to start client %v", err)
 	}
 
-	host := fmt.Sprintf("%s:%d", *binding, *port)
+	host := fmt.Sprintf("%s:%d", binding, port)
 	log.Printf("Starting at %s", host)
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		path := r.URL.Path
-		if regexp.MustCompile("^/api").MatchString(path) {
-			messageAPI.APIHandleFunc(w, r)
-		} else {
-			proxy.ServeHTTP(w, r)
-		}
-	})
+	http.Handle("/", proxy)
+	http.Handle("/api/", messageAPI)
+
 	if err := http.ListenAndServe(host, nil); err != nil {
 		log.Fatalf("Server error: %v", err)
 	}
