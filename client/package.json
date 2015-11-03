@@ -1,13 +1,12 @@
 {
-  "name": "messager",
+  "name": "go-chat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "webpack --progress --colors",
     "serve": "node ./server.js"
   },
-  "author": "",
+  "author": "matt-wratt",
   "license": "ISC",
   "devDependencies": {
     "babel": "^5",

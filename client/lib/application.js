@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import Messager from './components/messager'
+import Chat from './components/chat'
 
-ReactDOM.render(<Messager />, document.querySelector('#app'))
+ReactDOM.render(<Chat />, document.querySelector('#app'))

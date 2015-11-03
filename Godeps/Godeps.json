@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/matt-wratt/messenger",
+	"ImportPath": "github.com/matt-wratt/go-chat",
 	"GoVersion": "go1.5.1",
 	"Deps": []
 }

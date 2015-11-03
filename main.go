@@ -12,7 +12,7 @@ import (
 	"path/filepath"
 	"regexp"
 
-	"github.com/matt-wratt/messenger/api"
+	"github.com/matt-wratt/go-chat/api"
 )
 
 var messageAPI = api.NewAPI()
