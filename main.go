@@ -10,7 +10,6 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-	"regexp"
 
 	"github.com/matt-wratt/go-chat/api"
 )
@@ -49,14 +48,9 @@ func main() {
 	host := fmt.Sprintf("%s:%d", binding, port)
 	log.Printf("Starting at %s", host)
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		path := r.URL.Path
-		if regexp.MustCompile("^/api").MatchString(path) {
-			messageAPI.ServeHTTP(w, r)
-		} else {
-			proxy.ServeHTTP(w, r)
-		}
-	})
+	http.Handle("/", proxy)
+	http.Handle("/api/", messageAPI)
+
 	if err := http.ListenAndServe(host, nil); err != nil {
 		log.Fatalf("Server error: %v", err)
 	}
