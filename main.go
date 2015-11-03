@@ -11,9 +11,11 @@ import (
 	"os/exec"
 	"path/filepath"
 	"regexp"
+
+	"github.com/matt-wratt/messenger/api"
 )
 
-var api = NewAPI()
+var messageAPI = api.NewAPI()
 
 func main() {
 	binding := flag.String("b", "0.0.0.0", "bind")
@@ -21,8 +23,8 @@ func main() {
 	flag.Parse()
 
 	log.Printf("Starting client")
-	path := filepath.Join("messager")
-	cmd := exec.Command("npm", "start")
+	path := filepath.Join("client")
+	cmd := exec.Command("npm", "run", "serve")
 	os.Setenv("PORT", fmt.Sprintf("%d", *port+1))
 	cmd.Dir = path
 	cmd.Stdout = os.Stdout
@@ -46,7 +48,7 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		path := r.URL.Path
 		if regexp.MustCompile("^/api").MatchString(path) {
-			api.APIHandleFunc(w, r)
+			messageAPI.APIHandleFunc(w, r)
 		} else {
 			proxy.ServeHTTP(w, r)
 		}

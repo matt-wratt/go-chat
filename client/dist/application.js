@@ -135,7 +135,7 @@
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -155,9 +155,9 @@
 
 	var _componentsMessager2 = _interopRequireDefault(_componentsMessager);
 
-	ReactDom.render(_react2['default'].createElement(_componentsMessager2['default'], null), document.querySelector('#app'));
+	_reactDom2['default'].render(_react2['default'].createElement(_componentsMessager2['default'], null), document.querySelector('#app'));
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "application.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "application.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 3 */
@@ -19739,7 +19739,7 @@
 /* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -19793,23 +19793,27 @@
 	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 	}
 
+	var _messagerScss = __webpack_require__(162);
+
+	var _messagerScss2 = _interopRequireDefault(_messagerScss);
+
 	var _react = __webpack_require__(149);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(162);
+	var _routes = __webpack_require__(166);
 
-	var _reactRouter2 = _interopRequireDefault(_reactRouter);
+	var _routes2 = _interopRequireDefault(_routes);
 
-	var _rooms = __webpack_require__(208);
+	var _rooms = __webpack_require__(213);
 
 	var _rooms2 = _interopRequireDefault(_rooms);
 
-	var _room = __webpack_require__(209);
+	var _room = __webpack_require__(216);
 
 	var _room2 = _interopRequireDefault(_room);
 
-	var _newRoom = __webpack_require__(210);
+	var _newRoom = __webpack_require__(218);
 
 	var _newRoom2 = _interopRequireDefault(_newRoom);
 
@@ -19825,7 +19829,7 @@
 	  _createClass(Messager, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2['default'].createElement(_reactRouter2['default'], null, _react2['default'].createElement(_reactRouter.Route, { path: '/' }, _react2['default'].createElement(_reactRouter.IndexRoute, { component: _rooms2['default'] }), _react2['default'].createElement(_reactRouter.Route, { path: '/:room', component: _room2['default'] }), _react2['default'].createElement(_reactRouter.Route, { path: '/new', component: _newRoom2['default'] })));
+	      return routes;
 	    }
 	  }]);
 
@@ -19835,10 +19839,46 @@
 	exports['default'] = Messager;
 	module.exports = exports['default'];
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "messager.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "messager.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 162 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	function _interopRequireDefault(obj) {
+	  return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	var _reactRouter = __webpack_require__(167);
+
+	var _reactRouter2 = _interopRequireDefault(_reactRouter);
+
+	var routes = React.createElement(_reactRouter2['default'], null, React.createElement(_reactRouter.Route, { path: '/' }, React.createElement(_reactRouter.IndexRoute, { component: Rooms }), React.createElement(_reactRouter.Route, { path: '/new', component: NewRoom }), React.createElement(_reactRouter.Route, { path: '/:path', component: Room })));
+
+	exports['default'] = routes;
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "routes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* components */
@@ -19848,19 +19888,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _Router2 = __webpack_require__(163);
+	var _Router2 = __webpack_require__(168);
 
 	var _Router3 = _interopRequireDefault(_Router2);
 
 	exports.Router = _Router3['default'];
 
-	var _Link2 = __webpack_require__(196);
+	var _Link2 = __webpack_require__(201);
 
 	var _Link3 = _interopRequireDefault(_Link2);
 
 	exports.Link = _Link3['default'];
 
-	var _IndexLink2 = __webpack_require__(197);
+	var _IndexLink2 = __webpack_require__(202);
 
 	var _IndexLink3 = _interopRequireDefault(_IndexLink2);
 
@@ -19868,25 +19908,25 @@
 
 	/* components (configuration) */
 
-	var _IndexRedirect2 = __webpack_require__(198);
+	var _IndexRedirect2 = __webpack_require__(203);
 
 	var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
 
 	exports.IndexRedirect = _IndexRedirect3['default'];
 
-	var _IndexRoute2 = __webpack_require__(200);
+	var _IndexRoute2 = __webpack_require__(205);
 
 	var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
 
 	exports.IndexRoute = _IndexRoute3['default'];
 
-	var _Redirect2 = __webpack_require__(199);
+	var _Redirect2 = __webpack_require__(204);
 
 	var _Redirect3 = _interopRequireDefault(_Redirect2);
 
 	exports.Redirect = _Redirect3['default'];
 
-	var _Route2 = __webpack_require__(201);
+	var _Route2 = __webpack_require__(206);
 
 	var _Route3 = _interopRequireDefault(_Route2);
 
@@ -19894,19 +19934,19 @@
 
 	/* mixins */
 
-	var _History2 = __webpack_require__(202);
+	var _History2 = __webpack_require__(207);
 
 	var _History3 = _interopRequireDefault(_History2);
 
 	exports.History = _History3['default'];
 
-	var _Lifecycle2 = __webpack_require__(203);
+	var _Lifecycle2 = __webpack_require__(208);
 
 	var _Lifecycle3 = _interopRequireDefault(_Lifecycle2);
 
 	exports.Lifecycle = _Lifecycle3['default'];
 
-	var _RouteContext2 = __webpack_require__(204);
+	var _RouteContext2 = __webpack_require__(209);
 
 	var _RouteContext3 = _interopRequireDefault(_RouteContext2);
 
@@ -19914,29 +19954,29 @@
 
 	/* utils */
 
-	var _useRoutes2 = __webpack_require__(183);
+	var _useRoutes2 = __webpack_require__(188);
 
 	var _useRoutes3 = _interopRequireDefault(_useRoutes2);
 
 	exports.useRoutes = _useRoutes3['default'];
 
-	var _RouteUtils = __webpack_require__(179);
+	var _RouteUtils = __webpack_require__(184);
 
 	exports.createRoutes = _RouteUtils.createRoutes;
 
-	var _RoutingContext2 = __webpack_require__(180);
+	var _RoutingContext2 = __webpack_require__(185);
 
 	var _RoutingContext3 = _interopRequireDefault(_RoutingContext2);
 
 	exports.RoutingContext = _RoutingContext3['default'];
 
-	var _PropTypes2 = __webpack_require__(195);
+	var _PropTypes2 = __webpack_require__(200);
 
 	var _PropTypes3 = _interopRequireDefault(_PropTypes2);
 
 	exports.PropTypes = _PropTypes3['default'];
 
-	var _match2 = __webpack_require__(205);
+	var _match2 = __webpack_require__(210);
 
 	var _match3 = _interopRequireDefault(_match2);
 
@@ -19947,7 +19987,7 @@
 	exports['default'] = _Router4['default'];
 
 /***/ },
-/* 163 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19966,25 +20006,25 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _warning = __webpack_require__(164);
+	var _warning = __webpack_require__(169);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _historyLibCreateHashHistory = __webpack_require__(165);
+	var _historyLibCreateHashHistory = __webpack_require__(170);
 
 	var _historyLibCreateHashHistory2 = _interopRequireDefault(_historyLibCreateHashHistory);
 
-	var _RouteUtils = __webpack_require__(179);
+	var _RouteUtils = __webpack_require__(184);
 
-	var _RoutingContext = __webpack_require__(180);
+	var _RoutingContext = __webpack_require__(185);
 
 	var _RoutingContext2 = _interopRequireDefault(_RoutingContext);
 
-	var _useRoutes = __webpack_require__(183);
+	var _useRoutes = __webpack_require__(188);
 
 	var _useRoutes2 = _interopRequireDefault(_useRoutes);
 
-	var _PropTypes = __webpack_require__(195);
+	var _PropTypes = __webpack_require__(200);
 
 	var _React$PropTypes = _react2['default'].PropTypes;
 	var func = _React$PropTypes.func;
@@ -20100,7 +20140,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 164 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -20167,7 +20207,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-/* 165 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20178,23 +20218,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(164);
+	var _warning = __webpack_require__(169);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _invariant = __webpack_require__(166);
+	var _invariant = __webpack_require__(171);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _Actions = __webpack_require__(167);
+	var _Actions = __webpack_require__(172);
 
-	var _ExecutionEnvironment = __webpack_require__(168);
+	var _ExecutionEnvironment = __webpack_require__(173);
 
-	var _DOMUtils = __webpack_require__(169);
+	var _DOMUtils = __webpack_require__(174);
 
-	var _DOMStateStorage = __webpack_require__(170);
+	var _DOMStateStorage = __webpack_require__(175);
 
-	var _createDOMHistory = __webpack_require__(171);
+	var _createDOMHistory = __webpack_require__(176);
 
 	var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 
@@ -20396,7 +20436,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 166 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -20456,7 +20496,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-/* 167 */
+/* 172 */
 /***/ function(module, exports) {
 
 	/**
@@ -20492,7 +20532,7 @@
 	};
 
 /***/ },
-/* 168 */
+/* 173 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20502,7 +20542,7 @@
 	exports.canUseDOM = canUseDOM;
 
 /***/ },
-/* 169 */
+/* 174 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20582,7 +20622,7 @@
 	}
 
 /***/ },
-/* 170 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20593,7 +20633,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(164);
+	var _warning = __webpack_require__(169);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -20635,7 +20675,7 @@
 	}
 
 /***/ },
-/* 171 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20646,15 +20686,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _invariant = __webpack_require__(166);
+	var _invariant = __webpack_require__(171);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _ExecutionEnvironment = __webpack_require__(168);
+	var _ExecutionEnvironment = __webpack_require__(173);
 
-	var _DOMUtils = __webpack_require__(169);
+	var _DOMUtils = __webpack_require__(174);
 
-	var _createHistory = __webpack_require__(172);
+	var _createHistory = __webpack_require__(177);
 
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 
@@ -20680,7 +20720,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 172 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20691,23 +20731,23 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(164);
+	var _warning = __webpack_require__(169);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _deepEqual = __webpack_require__(173);
+	var _deepEqual = __webpack_require__(178);
 
 	var _deepEqual2 = _interopRequireDefault(_deepEqual);
 
-	var _AsyncUtils = __webpack_require__(176);
+	var _AsyncUtils = __webpack_require__(181);
 
-	var _Actions = __webpack_require__(167);
+	var _Actions = __webpack_require__(172);
 
-	var _runTransitionHook = __webpack_require__(177);
+	var _runTransitionHook = __webpack_require__(182);
 
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-	var _deprecate = __webpack_require__(178);
+	var _deprecate = __webpack_require__(183);
 
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 
@@ -20959,12 +20999,12 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 173 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var pSlice = Array.prototype.slice;
-	var objectKeys = __webpack_require__(174);
-	var isArguments = __webpack_require__(175);
+	var objectKeys = __webpack_require__(179);
+	var isArguments = __webpack_require__(180);
 
 	var deepEqual = module.exports = function (actual, expected, opts) {
 	  if (!opts) opts = {};
@@ -21059,7 +21099,7 @@
 
 
 /***/ },
-/* 174 */
+/* 179 */
 /***/ function(module, exports) {
 
 	exports = module.exports = typeof Object.keys === 'function'
@@ -21074,7 +21114,7 @@
 
 
 /***/ },
-/* 175 */
+/* 180 */
 /***/ function(module, exports) {
 
 	var supportsArgumentsClass = (function(){
@@ -21100,7 +21140,7 @@
 
 
 /***/ },
-/* 176 */
+/* 181 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -21131,7 +21171,7 @@
 	}
 
 /***/ },
-/* 177 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21140,7 +21180,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(164);
+	var _warning = __webpack_require__(169);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -21160,7 +21200,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 178 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21169,7 +21209,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(164);
+	var _warning = __webpack_require__(169);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -21184,7 +21224,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 179 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21204,7 +21244,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _warning = __webpack_require__(164);
+	var _warning = __webpack_require__(169);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -21302,7 +21342,7 @@
 	}
 
 /***/ },
-/* 180 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21321,11 +21361,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _invariant = __webpack_require__(166);
+	var _invariant = __webpack_require__(171);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _getRouteParams = __webpack_require__(181);
+	var _getRouteParams = __webpack_require__(186);
 
 	var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
 
@@ -21438,14 +21478,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 181 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _PatternUtils = __webpack_require__(182);
+	var _PatternUtils = __webpack_require__(187);
 
 	/**
 	 * Extracts an object of params the given route cares about from
@@ -21467,7 +21507,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 182 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21481,7 +21521,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _invariant = __webpack_require__(166);
+	var _invariant = __webpack_require__(171);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -21669,7 +21709,7 @@
 	}
 
 /***/ },
-/* 183 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21682,31 +21722,31 @@
 
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	var _warning = __webpack_require__(164);
+	var _warning = __webpack_require__(169);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _historyLibActions = __webpack_require__(167);
+	var _historyLibActions = __webpack_require__(172);
 
-	var _historyLibUseQueries = __webpack_require__(184);
+	var _historyLibUseQueries = __webpack_require__(189);
 
 	var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 
-	var _computeChangedRoutes2 = __webpack_require__(189);
+	var _computeChangedRoutes2 = __webpack_require__(194);
 
 	var _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
 
-	var _TransitionUtils = __webpack_require__(190);
+	var _TransitionUtils = __webpack_require__(195);
 
-	var _isActive2 = __webpack_require__(192);
+	var _isActive2 = __webpack_require__(197);
 
 	var _isActive3 = _interopRequireDefault(_isActive2);
 
-	var _getComponents = __webpack_require__(193);
+	var _getComponents = __webpack_require__(198);
 
 	var _getComponents2 = _interopRequireDefault(_getComponents);
 
-	var _matchRoutes = __webpack_require__(194);
+	var _matchRoutes = __webpack_require__(199);
 
 	var _matchRoutes2 = _interopRequireDefault(_matchRoutes);
 
@@ -21965,7 +22005,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 184 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21978,11 +22018,11 @@
 
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	var _qs = __webpack_require__(185);
+	var _qs = __webpack_require__(190);
 
 	var _qs2 = _interopRequireDefault(_qs);
 
-	var _runTransitionHook = __webpack_require__(177);
+	var _runTransitionHook = __webpack_require__(182);
 
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
@@ -22075,13 +22115,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 185 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Load modules
 
-	var Stringify = __webpack_require__(186);
-	var Parse = __webpack_require__(188);
+	var Stringify = __webpack_require__(191);
+	var Parse = __webpack_require__(193);
 
 
 	// Declare internals
@@ -22096,12 +22136,12 @@
 
 
 /***/ },
-/* 186 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Load modules
 
-	var Utils = __webpack_require__(187);
+	var Utils = __webpack_require__(192);
 
 
 	// Declare internals
@@ -22223,7 +22263,7 @@
 
 
 /***/ },
-/* 187 */
+/* 192 */
 /***/ function(module, exports) {
 
 	// Load modules
@@ -22419,12 +22459,12 @@
 
 
 /***/ },
-/* 188 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Load modules
 
-	var Utils = __webpack_require__(187);
+	var Utils = __webpack_require__(192);
 
 
 	// Declare internals
@@ -22611,14 +22651,14 @@
 
 
 /***/ },
-/* 189 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _PatternUtils = __webpack_require__(182);
+	var _PatternUtils = __webpack_require__(187);
 
 	function routeParamsChanged(route, prevState, nextState) {
 	  if (!route.path) return false;
@@ -22678,7 +22718,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 190 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22687,7 +22727,7 @@
 	exports.runEnterHooks = runEnterHooks;
 	exports.runLeaveHooks = runLeaveHooks;
 
-	var _AsyncUtils = __webpack_require__(191);
+	var _AsyncUtils = __webpack_require__(196);
 
 	function createEnterHook(hook, route) {
 	  return function (a, b, callback) {
@@ -22755,7 +22795,7 @@
 	}
 
 /***/ },
-/* 191 */
+/* 196 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22818,14 +22858,14 @@
 	}
 
 /***/ },
-/* 192 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _PatternUtils = __webpack_require__(182);
+	var _PatternUtils = __webpack_require__(187);
 
 	function deepEqual(a, b) {
 	  if (a == b) return true;
@@ -22919,14 +22959,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 193 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _AsyncUtils = __webpack_require__(191);
+	var _AsyncUtils = __webpack_require__(196);
 
 	function getComponentsForRoute(location, route, callback) {
 	  if (route.component || route.components) {
@@ -22957,18 +22997,18 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 194 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _AsyncUtils = __webpack_require__(191);
+	var _AsyncUtils = __webpack_require__(196);
 
-	var _PatternUtils = __webpack_require__(182);
+	var _PatternUtils = __webpack_require__(187);
 
-	var _RouteUtils = __webpack_require__(179);
+	var _RouteUtils = __webpack_require__(184);
 
 	function getChildRoutes(route, location, callback) {
 	  if (route.childRoutes) {
@@ -23102,7 +23142,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 195 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23160,7 +23200,7 @@
 	};
 
 /***/ },
-/* 196 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23321,7 +23361,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 197 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23340,7 +23380,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Link = __webpack_require__(196);
+	var _Link = __webpack_require__(201);
 
 	var _Link2 = _interopRequireDefault(_Link);
 
@@ -23368,7 +23408,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 198 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23387,19 +23427,19 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _invariant = __webpack_require__(166);
+	var _invariant = __webpack_require__(171);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _warning = __webpack_require__(164);
+	var _warning = __webpack_require__(169);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _Redirect = __webpack_require__(199);
+	var _Redirect = __webpack_require__(204);
 
 	var _Redirect2 = _interopRequireDefault(_Redirect);
 
-	var _PropTypes = __webpack_require__(195);
+	var _PropTypes = __webpack_require__(200);
 
 	var _React$PropTypes = _react2['default'].PropTypes;
 	var string = _React$PropTypes.string;
@@ -23449,7 +23489,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 199 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23468,15 +23508,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _invariant = __webpack_require__(166);
+	var _invariant = __webpack_require__(171);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _RouteUtils = __webpack_require__(179);
+	var _RouteUtils = __webpack_require__(184);
 
-	var _PatternUtils = __webpack_require__(182);
+	var _PatternUtils = __webpack_require__(187);
 
-	var _PropTypes = __webpack_require__(195);
+	var _PropTypes = __webpack_require__(200);
 
 	var _React$PropTypes = _react2['default'].PropTypes;
 	var string = _React$PropTypes.string;
@@ -23565,7 +23605,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 200 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23584,17 +23624,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _invariant = __webpack_require__(166);
+	var _invariant = __webpack_require__(171);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _warning = __webpack_require__(164);
+	var _warning = __webpack_require__(169);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _RouteUtils = __webpack_require__(179);
+	var _RouteUtils = __webpack_require__(184);
 
-	var _PropTypes = __webpack_require__(195);
+	var _PropTypes = __webpack_require__(200);
 
 	var _React$PropTypes = _react2['default'].PropTypes;
 	var bool = _React$PropTypes.bool;
@@ -23645,7 +23685,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 201 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23664,17 +23704,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _warning = __webpack_require__(164);
+	var _warning = __webpack_require__(169);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _invariant = __webpack_require__(166);
+	var _invariant = __webpack_require__(171);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _RouteUtils = __webpack_require__(179);
+	var _RouteUtils = __webpack_require__(184);
 
-	var _PropTypes = __webpack_require__(195);
+	var _PropTypes = __webpack_require__(200);
 
 	var _React$PropTypes = _react2['default'].PropTypes;
 	var string = _React$PropTypes.string;
@@ -23738,14 +23778,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 202 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _PropTypes = __webpack_require__(195);
+	var _PropTypes = __webpack_require__(200);
 
 	var History = {
 
@@ -23761,7 +23801,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 203 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23774,7 +23814,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _invariant = __webpack_require__(166);
+	var _invariant = __webpack_require__(171);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -23830,7 +23870,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 204 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23873,7 +23913,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 205 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23884,21 +23924,21 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _invariant = __webpack_require__(166);
+	var _invariant = __webpack_require__(171);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _historyLibCreateMemoryHistory = __webpack_require__(206);
+	var _historyLibCreateMemoryHistory = __webpack_require__(211);
 
 	var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
 
-	var _historyLibUseBasename = __webpack_require__(207);
+	var _historyLibUseBasename = __webpack_require__(212);
 
 	var _historyLibUseBasename2 = _interopRequireDefault(_historyLibUseBasename);
 
-	var _RouteUtils = __webpack_require__(179);
+	var _RouteUtils = __webpack_require__(184);
 
-	var _useRoutes = __webpack_require__(183);
+	var _useRoutes = __webpack_require__(188);
 
 	var _useRoutes2 = _interopRequireDefault(_useRoutes);
 
@@ -23941,7 +23981,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 206 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23952,13 +23992,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _invariant = __webpack_require__(166);
+	var _invariant = __webpack_require__(171);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _Actions = __webpack_require__(167);
+	var _Actions = __webpack_require__(172);
 
-	var _createHistory = __webpack_require__(172);
+	var _createHistory = __webpack_require__(177);
 
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 
@@ -24088,7 +24128,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 207 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24101,7 +24141,7 @@
 
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	var _runTransitionHook = __webpack_require__(177);
+	var _runTransitionHook = __webpack_require__(182);
 
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
@@ -24183,10 +24223,10 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 208 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -24243,6 +24283,12 @@
 	var _react = __webpack_require__(149);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(167);
+
+	var _api = __webpack_require__(214);
+
+	var _api2 = _interopRequireDefault(_api);
 
 	var Rooms = (function (_React$Component) {
 	  _inherits(Rooms, _React$Component);
@@ -24254,9 +24300,32 @@
 	  }
 
 	  _createClass(Rooms, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this = this;
+
+	      this.interval = setInterval(function () {
+	        _api2['default'].rooms().then(function (rooms) {
+	          return _this.setState({ rooms: rooms, error: null });
+	        })['catch'](function (error) {
+	          return _this.setState({ error: error.message });
+	        });
+	      }, 300);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      clearInterval(this.interval);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2['default'].createElement('h1', null, 'Rooms');
+	      this.state = this.state || {};
+	      var rooms = (this.state.rooms || []).map(function (room) {
+	        return _react2['default'].createElement('div', null, _react2['default'].createElement(_reactRouter.Link, { to: '/' + room.path }, room.name, ' (', room.messages.length, ')'));
+	      });
+	      var error = this.state.error || null;
+	      return _react2['default'].createElement('div', null, _react2['default'].createElement('h1', null, 'Rooms'), _react2['default'].createElement(_reactRouter.Link, { to: '/new' }, 'New Room'), _react2['default'].createElement('br', null), _react2['default'].createElement('div', { className: 'error' }, error), _react2['default'].createElement('br', null), rooms);
 	    }
 	  }]);
 
@@ -24266,13 +24335,101 @@
 	exports['default'] = Rooms;
 	module.exports = exports['default'];
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "rooms.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "rooms.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 209 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	function _interopRequireDefault(obj) {
+	  return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	var _request = __webpack_require__(215);
+
+	var _request2 = _interopRequireDefault(_request);
+
+	var parse = function parse(text) {
+	  return JSON.parse(text);
+	};
+
+	exports['default'] = {
+	  rooms: function rooms() {
+	    return _request2['default'].get('/api/rooms').then(parse);
+	  },
+
+	  create: function create(name) {
+	    return _request2['default'].post('/api/rooms', { data: { name: name } });
+	  },
+
+	  room: function room(_room) {
+	    return _request2['default'].get('/api/rooms/' + _room).then(parse);
+	  },
+
+	  message: function message(room, value) {
+	    return _request2['default'].post('/api/rooms/' + room, { data: { value: value } });
+	  }
+	};
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "api.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 215 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	function request(method, url) {
+	  var opts = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+
+	  return new Promise(function (resolve, reject) {
+	    var headers = opts.headers || {};
+	    var data = opts.data || {};
+	    var xhr = new XMLHttpRequest();
+	    xhr.open(method, url);
+	    Object.keys(headers).forEach(function (header) {
+	      xhr.setRequestHeader(header, headers[header]);
+	    });
+	    xhr.onload = function (event) {
+	      return resolve(xhr.responseText);
+	    };
+	    xhr.onerror = reject;
+	    if (data) {
+	      xhr.send(new Blob([JSON.stringify(data)], { type: 'application/json' }));
+	    } else {
+	      xhr.send();
+	    }
+	  });
+	}
+
+	exports['default'] = {
+	  get: request.bind(null, 'GET'),
+	  post: request.bind(null, 'POST'),
+	  put: request.bind(null, 'PUT')
+	};
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "request.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 216 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -24329,6 +24486,16 @@
 	var _react = __webpack_require__(149);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(167);
+
+	var _api = __webpack_require__(214);
+
+	var _api2 = _interopRequireDefault(_api);
+
+	var _newMessage = __webpack_require__(217);
+
+	var _newMessage2 = _interopRequireDefault(_newMessage);
 
 	var Room = (function (_React$Component) {
 	  _inherits(Room, _React$Component);
@@ -24340,9 +24507,36 @@
 	  }
 
 	  _createClass(Room, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this = this;
+
+	      this.interval = setInterval(function () {
+	        _api2['default'].room(_this.props.params.path).then(function (room) {
+	          return _this.setState({ room: room, error: null });
+	        })['catch'](function (error) {
+	          return _this.setState({ error: error.message });
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      clearInterval(this.interval);
+	    }
+	  }, {
+	    key: 'room',
+	    value: function room() {
+	      return (this.state || {}).room || {};
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2['default'].createElement('h1', null, 'Room');
+	      var room = this.room();
+	      var messages = (room.messages || []).map(function (message) {
+	        return _react2['default'].createElement('div', null, message.value);
+	      });
+	      return _react2['default'].createElement('div', null, _react2['default'].createElement('h1', null, room.name), _react2['default'].createElement(_reactRouter.Link, { to: '/' }, 'Back'), _react2['default'].createElement('br', null), _react2['default'].createElement('br', null), messages, _react2['default'].createElement('br', null), _react2['default'].createElement(_newMessage2['default'], { room: room }));
 	    }
 	  }]);
 
@@ -24352,13 +24546,13 @@
 	exports['default'] = Room;
 	module.exports = exports['default'];
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "room.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "room.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 210 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -24416,6 +24610,12 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(167);
+
+	var _api = __webpack_require__(214);
+
+	var _api2 = _interopRequireDefault(_api);
+
 	var NewRoom = (function (_React$Component) {
 	  _inherits(NewRoom, _React$Component);
 
@@ -24426,9 +24626,25 @@
 	  }
 
 	  _createClass(NewRoom, [{
+	    key: 'submit',
+	    value: function submit(event) {
+	      var _this = this;
+
+	      event.preventDefault();
+	      _api2['default'].message(this.props.room.path, this.refs.message.value).then(function () {
+	        _this.setState({ error: null });
+	        _this.refs.message.value = '';
+	        _this.refs.message.focus();
+	      })['catch'](function (error) {
+	        _this.setState({ error: error.message });
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2['default'].createElement('h1', null, 'New Room');
+	      this.state = this.state || {};
+	      var error = this.state.error || null;
+	      return _react2['default'].createElement('form', { onSubmit: this.submit.bind(this) }, _react2['default'].createElement('label', { htmlFor: 'message' }, 'New Message'), _react2['default'].createElement('input', { id: 'message', name: 'message', ref: 'message' }), _react2['default'].createElement('input', { type: 'submit' }), _react2['default'].createElement('br', null), _react2['default'].createElement('div', { className: 'error' }, error));
 	    }
 	  }]);
 
@@ -24438,7 +24654,113 @@
 	exports['default'] = NewRoom;
 	module.exports = exports['default'];
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/messager/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "new-room.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "new-message.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 218 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () {
+	  function defineProperties(target, props) {
+	    for (var i = 0; i < props.length; i++) {
+	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ('value' in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+	    }
+	  }return function (Constructor, protoProps, staticProps) {
+	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+	  };
+	})();
+
+	var _get = function get(_x, _x2, _x3) {
+	  var _again = true;_function: while (_again) {
+	    var object = _x,
+	        property = _x2,
+	        receiver = _x3;_again = false;if (object === null) object = Function.prototype;var desc = Object.getOwnPropertyDescriptor(object, property);if (desc === undefined) {
+	      var parent = Object.getPrototypeOf(object);if (parent === null) {
+	        return undefined;
+	      } else {
+	        _x = parent;_x2 = property;_x3 = receiver;_again = true;desc = parent = undefined;continue _function;
+	      }
+	    } else if ('value' in desc) {
+	      return desc.value;
+	    } else {
+	      var getter = desc.get;if (getter === undefined) {
+	        return undefined;
+	      }return getter.call(receiver);
+	    }
+	  }
+	};
+
+	function _interopRequireDefault(obj) {
+	  return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	function _classCallCheck(instance, Constructor) {
+	  if (!(instance instanceof Constructor)) {
+	    throw new TypeError('Cannot call a class as a function');
+	  }
+	}
+
+	function _inherits(subClass, superClass) {
+	  if (typeof superClass !== 'function' && superClass !== null) {
+	    throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
+	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	}
+
+	var _react = __webpack_require__(149);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(167);
+
+	var _api = __webpack_require__(214);
+
+	var _api2 = _interopRequireDefault(_api);
+
+	var NewRoom = (function (_React$Component) {
+	  _inherits(NewRoom, _React$Component);
+
+	  function NewRoom() {
+	    _classCallCheck(this, NewRoom);
+
+	    _get(Object.getPrototypeOf(NewRoom.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(NewRoom, [{
+	    key: 'submit',
+	    value: function submit(event) {
+	      var _this = this;
+
+	      event.preventDefault();
+	      _api2['default'].create(this.refs.name.value).then(function () {
+	        _this.props.history.pushState(null, '/');
+	      })['catch'](function (error) {
+	        _this.setState({ error: error.message });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      this.state = this.state || {};
+	      var error = this.state.error || null;
+	      return _react2['default'].createElement('form', { onSubmit: this.submit.bind(this) }, _react2['default'].createElement('h1', null, 'New Room'), _react2['default'].createElement(_reactRouter.Link, { to: '/' }, 'Back'), _react2['default'].createElement('br', null), _react2['default'].createElement('br', null), _react2['default'].createElement('div', { className: 'error' }, error), _react2['default'].createElement('label', { htmlFor: 'name' }, 'Name'), _react2['default'].createElement('input', { id: 'name', name: 'name', ref: 'name' }), _react2['default'].createElement('input', { type: 'submit' }));
+	    }
+	  }]);
+
+	  return NewRoom;
+	})(_react2['default'].Component);
+
+	exports['default'] = NewRoom;
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/mwratt/Projects/go/src/github.com/matt-wratt/messenger/client/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "new-room.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }
 /******/ ]);

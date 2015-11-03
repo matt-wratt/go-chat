@@ -1,4 +1,4 @@
-package main
+package api
 
 // Message doc
 type Message struct {
