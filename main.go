@@ -22,24 +22,21 @@ func main() {
 	port := flag.Int("p", 8080, "server port")
 	flag.Parse()
 
-	log.Printf("Starting client")
-	path := filepath.Join("client")
-	cmd := exec.Command("npm", "run", "serve")
 	os.Setenv("PORT", fmt.Sprintf("%d", *port+1))
-	cmd.Dir = path
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
-	if err := cmd.Start(); err != nil {
-		log.Printf("Failed to start client %v", err)
-		return
+
+	if err := command("Building client", "client", "npm", "run", "build").Run(); err != nil {
+		log.Fatal("Failed to build client")
+	}
+
+	if err := command("Starting client", "client", "npm", "run", "serve").Start(); err != nil {
+		log.Fatalf("Failed to start client %v", err)
 	}
 
 	var proxy *httputil.ReverseProxy
 	if clientURL, err := url.Parse(fmt.Sprintf("http://localhost:%d", *port+1)); err == nil {
 		proxy = httputil.NewSingleHostReverseProxy(clientURL)
 	} else {
-		log.Printf("Failed to create proxy %v", err)
-		return
+		log.Fatalf("Failed to start client %v", err)
 	}
 
 	host := fmt.Sprintf("%s:%d", *binding, *port)
@@ -54,7 +51,16 @@ func main() {
 		}
 	})
 	if err := http.ListenAndServe(host, nil); err != nil {
-		log.Printf("%v", err)
+		log.Fatalf("Server error: %v", err)
 	}
 	log.Printf("Stopping %s", host)
+}
+
+func command(description, path, name string, args ...string) *exec.Cmd {
+	log.Printf(description)
+	cmd := exec.Command(name, args...)
+	cmd.Dir = filepath.Join(path)
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	return cmd
 }

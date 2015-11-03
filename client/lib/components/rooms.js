@@ -20,7 +20,7 @@ export default class Rooms extends React.Component {
     this.state = this.state || {}
     const rooms = (this.state.rooms || []).map(room => {
       return (
-        <div>
+        <div key={ room.path }>
           <Link to={ `/${room.path}` }>{ room.name } ({room.messages.length})</Link>
         </div>
       )

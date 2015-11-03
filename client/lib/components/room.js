@@ -23,14 +23,14 @@ export default class Room extends React.Component {
 
   render () {
     const room = this.room()
-    const messages = (room.messages || []).map(message => {
+    const messages = (room.messages || []).map((message, i) => {
       return (
-        <div>{ message.value }</div>
+        <div key={ i }>{ message.value }</div>
       )
     })
     return (
       <div>
-        <h1>{ room.name }</h1>
+        <h1>{ room.name || 'Room' }</h1>
         <Link to="/">Back</Link>
         <br />
         <br />
