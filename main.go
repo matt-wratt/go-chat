@@ -52,7 +52,7 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		path := r.URL.Path
 		if regexp.MustCompile("^/api").MatchString(path) {
-			messageAPI.APIHandleFunc(w, r)
+			messageAPI.ServeHTTP(w, r)
 		} else {
 			proxy.ServeHTTP(w, r)
 		}

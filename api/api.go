@@ -62,7 +62,7 @@ func NewAPI() API {
 }
 
 // APIHandleFunc routes requests to api resources
-func (api API) APIHandleFunc(w http.ResponseWriter, r *http.Request) {
+func (api API) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	found := false
 	method := r.Method
